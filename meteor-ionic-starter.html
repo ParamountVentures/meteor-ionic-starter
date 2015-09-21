@@ -2,13 +2,6 @@
   <title>meteor-ionic-starter</title>
 </head>
 
-<body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+<body ng-app="start">
+    <div ng-include="'meteor-ionic-starter.ng.html'"></div>
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
