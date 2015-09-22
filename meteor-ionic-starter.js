@@ -17,7 +17,11 @@ if (Meteor.isClient) {
     angular.element(document).ready(onReady);
   }
 
-  app.controller('TestController', function() {
-    this.message = 'Hello from the Angular Controller';
+  app.controller('TestController', function($scope) {
+      $scope.message = 'Hello from the Angular Controller';
+
+      $scope.changeText = function() {
+        this.message = 'New Message from the Angular Controller';
+      }
   });
 }

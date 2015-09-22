@@ -4,9 +4,10 @@
             <div class="h1 title">Hello, Ionic and Meteor</div>
         </div>
     </div>
-    <div class="content has-header padding">
-        <p ng-controller="TestController as testCtrl">
-            {{testCtrl.message}}
+    <div class="content has-header padding" ng-controller="TestController as testCtrl">
+        <p>
+            {{message}}
         </p>
+        <button class="button" ng-click="changeText()">Change Text</button>
     </div>
 </ion-view>
