@@ -1,18 +1,23 @@
 if (Meteor.isClient) {
-  var app = angular.module('start',
-    [
-      'angular-meteor',
-      'ionic'
-    ]
-  );
+  // counter starts at 0
+  Session.setDefault('counter', 0);
 
-  function onReady() {
-    angular.bootstrap(document,['start']);
-  }
+  Template.hello.helpers({
+    counter: function () {
+      return Session.get('counter');
+    }
+  });
 
-  if (Meteor.isCordova) {
-    angular.element(document).on('deviceready, onReady');
-  } else {
-    angular.element(document).ready(onReady);
-  }
+  Template.hello.events({
+    'click button': function () {
+      // increment the counter when button is clicked
+      Session.set('counter', Session.get('counter') + 1);
+    }
+  });
+}
+
+if (Meteor.isServer) {
+  Meteor.startup(function () {
+    // code to run on server at startup
+  });
 }

@@ -7,6 +7,7 @@ This is a simple starter example and I will try to keep it up to date and things
 ##Steps
 1. Create the project **meteor create meteor-ionic-starter**
 2. Add the official Meteor Ionic package **meteor add driftyco:ionic**
+<<<<<<< HEAD
 3. Add the angular package **meteor add urigo:angular**
 4. Remove boilerplate code from the .js file and add with new code.
 5. Add ng-app to the body tag for the relevant module name used in the .js file. Ensure 'angular-meteor' as added as a dependent module.
@@ -16,3 +17,5 @@ This is a simple starter example and I will try to keep it up to date and things
 
 ###Run
 meteor
+=======
+>>>>>>> parent of 030d92d... Added angular integration sample.
