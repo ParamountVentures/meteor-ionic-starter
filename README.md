@@ -10,6 +10,9 @@ This is a simple starter example and I will try to keep it up to date and things
 3. Add the angular package **meteor add urigo:angular**
 4. Remove boilerplate code from the .js file and add with new code.
 5. Add ng-app to the body tag for the relevant module name used in the .js file. Ensure 'angular-meteor' as added as a dependent module.
+6. Using the Android SDK Manager, ensure you have SDK Platform 19 (Android 4.4.2) installed.
+7. Install the meteor Android SDK **meteor install-sdk android**, add as a platform **meteor add-platform android** and run **meteor run android**
+
 
 ###Run
 meteor
