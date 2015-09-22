@@ -17,11 +17,31 @@ if (Meteor.isClient) {
     angular.element(document).ready(onReady);
   }
 
-  app.controller('TestController', function($scope) {
+  app.controller('TestController', function($scope, $meteor) {
       $scope.message = 'Hello from the Angular Controller';
 
-      $scope.changeText = function() {
+      $scope.changeAngularText = function() {
         this.message = 'New Message from the Angular Controller';
-      }
+      };
+
+      $scope.changeMeteorText = function() {
+        var self = this;
+        $meteor.call('changeText').then(
+          function (data) {
+            self.message = data;
+          },
+          function (err) {
+            console.log('error', err);
+          }
+        );
+      };
+  });
+}
+
+if (Meteor.isServer) {
+  Meteor.methods({
+    'changeText': function() {
+      return 'New Message from the Meteor Controller';
+    }
   });
 }
