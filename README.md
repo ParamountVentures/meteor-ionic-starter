@@ -11,7 +11,8 @@ Uses ui-router in Angular for client side routing and (optionally) Picker for se
 3. Add the angular package **meteor add angular**
 4. Remove boilerplate code from the .js file and add with new code.
 5. Ensure 'angular-meteor' as added as a dependent module.
-6. Run in the terminal as **meteor**
+6. [Optionl] Server soide routing **meteor add meteorhacks:picker**
+7. Run in the terminal as **meteor**
 
 ###Android
 1. Using the Android SDK Manager, ensure you have SDK Platform 23+ installed.
