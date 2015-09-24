@@ -17,6 +17,28 @@ if (Meteor.isClient) {
     angular.element(document).ready(onReady);
   }
 
+  // route config
+  app.config(function($urlRouterProvider, $stateProvider, $locationProvider){
+
+    // avoid page refreshes on navigation
+    $locationProvider.html5Mode(true);
+
+    // map the urls to templates to load
+     $stateProvider
+       .state('index', {
+         url: '/',
+         templateUrl: 'index.ng.html'
+       })
+       .state('second', {
+         url: '/second',
+         templateUrl: 'second.ng.html'
+       })
+
+      // if nothing matches, back to home
+      $urlRouterProvider.otherwise("/");
+    });
+
+  // controller config
   app.controller('TestController', function($scope, $meteor) {
       $scope.message = 'Hello from the Angular Controller';
 
