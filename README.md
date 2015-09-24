@@ -8,7 +8,7 @@ This is a simple starter example and I will try to keep it up to date and things
 ###Web
 1. Create the project **meteor create meteor-ionic-starter** - ensure you are working with Meteor 1.2.0.1+.
 2. Add the official Meteor Ionic package **meteor add driftyco:ionic**
-3. Add the angular package **meteor add urigo:angular**
+3. Add the angular package **meteor add angular**
 4. Remove boilerplate code from the .js file and add with new code.
 5. Ensure 'angular-meteor' as added as a dependent module.
 6. Run in the terminal as **meteor**
