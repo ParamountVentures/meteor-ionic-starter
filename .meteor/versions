@@ -1,3 +1,4 @@
+angular@1.0.0-rc.7
 angular:angular@1.4.6
 angular:angular-animate@1.4.6
 angular:angular-sanitize@1.4.6
@@ -67,7 +68,6 @@ templating-tools@1.0.0
 tracker@1.0.8
 ui@1.0.8
 underscore@1.0.4
-urigo:angular@0.9.3
 urigo:cancel-fastclick@0.0.2
 url@1.0.5
 webapp@1.2.2
