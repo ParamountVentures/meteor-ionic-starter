@@ -39,7 +39,7 @@ if (Meteor.isClient) {
     });
 
   // controller config
-  app.controller('TestController', function($scope, $meteor) {
+  app.controller('TestController', function($scope, $meteor, $http) {
       $scope.message = 'Hello from the Angular Controller';
 
       $scope.changeAngularText = function() {
@@ -57,13 +57,30 @@ if (Meteor.isClient) {
           }
         );
       };
+
+    $scope.callRemote = function() {
+      var self = this;
+      self.message = 'hi';//response;
+
+      $http.get('/remote/1')
+        .success(function(response){
+          self.message = response;
+        });
+    };
   });
 }
 
 if (Meteor.isServer) {
   Meteor.methods({
-    'changeText': function() {
+    changeText: function () {
       return 'New Message from the Meteor Controller';
     }
+  });
+
+  Picker.route( '/remote/:_id', function( params, request, response, next ) {
+
+    response.setHeader( 'Content-Type', 'text/plain' );
+    response.statusCode = 200;
+    response.end('Remote with ' + params._id);
   });
 }

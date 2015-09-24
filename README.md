@@ -1,8 +1,8 @@
 #meteor ionic starter
 
-After looking around to try and find a working starter example of Meteor and Ionic and after hours of integration issues (both are fast moving at the moment are Meteor, Ionic and Angular get better integration) I figured it would be useful for others to benefit from the time i put in.
+A starter example of Meteor, Angular and Ionic. Will try to stay in line with the latest releases.
 
-This is a simple starter example and I will try to keep it up to date and things progress.
+Uses ui-router in Angular for client side routing and (optionally) Picker for server side routing.
 
 ##Steps
 ###Web
